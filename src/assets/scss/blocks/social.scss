@@ -1,0 +1,18 @@
+.social {
+    display: flex;
+    justify-content: center;
+    &__item {
+        margin-right: 1.5rem;
+        &:nth-child(3){
+            margin-right: 0;
+        }
+        
+    }
+    @include breakpoint($tablet) {
+        display: none;
+    }
+}
+
+.social__item--share:nth-child(3) {
+    margin-right: 1.5rem;
+}

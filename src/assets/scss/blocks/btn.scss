@@ -1,0 +1,42 @@
+.btn{
+    padding: 1.1em 2.1em;
+    display: inline-block;
+    width: 13rem;
+    height: 4rem;
+    vertical-align: top;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 1em 1.7em;
+    border-radius: 2.5rem;
+    transition: background-color .2s linear;
+    text-align: center;
+    &--red {
+        background-color: #F23F3F;
+        box-shadow: 0 7px 17px -10px rgba(#F23F3F
+        , .2);
+        &:hover {
+            background-color: darken(#F23F3F, $amount: 5%);
+        }
+    }
+    &--blue {
+        background-color: blue;
+        box-shadow: 0 7px 17px -10px rgba(#2054DB
+        , .35);
+        &:hover {
+            background-color: darken(#2054DB, $amount: 5%);
+        }
+    }
+    &--lessrounded {
+        border-radius: 5px;
+    }
+    &--small {
+        padding: 0.7em 1.25em;
+    }
+
+}
+

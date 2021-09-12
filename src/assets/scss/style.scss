@@ -1,0 +1,52 @@
+@import "variable";
+@import "mixins";
+@import "vendor/reset";
+
+html {
+    font-size: 62.5%;
+}
+li {
+    list-style: none;
+}
+body {
+    background-color: #121212;
+    font-size: 1.4rem;
+    color: $white;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    line-height: 1.5;
+    &.blocked {
+        overflow: hidden;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+/*Blocks  */
+@import "blocks/page";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/subnav";
+@import "blocks/search";
+@import "blocks/sidebar";
+@import "blocks/profile";  
+@import "blocks/social";
+@import "blocks/btn";
+@import "blocks/main";
+@import "blocks/container";
+@import "blocks/srories";
+@import "blocks/add-post";
+@import "blocks/post";
+@import "blocks/iframe";
+@import "blocks/pagination";
+@import "blocks/interesting";
+@import "blocks/comments";
+@import "blocks/form";
+@import "blocks/work";
+@import "blocks/cabinet";
+@import "blocks/modal";
+@import "blocks/share";
+@import "blocks/burger";

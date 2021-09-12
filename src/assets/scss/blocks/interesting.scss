@@ -1,0 +1,36 @@
+.interesting{
+    border-bottom: 1px solid #1C1C1C;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include breakpoint ($mobile) {
+            flex-direction: column;
+
+        }
+
+        &-title {
+            margin-bottom: 0.5rem;
+        }
+
+        &-item{
+            width: 50%;
+            @include breakpoint ($mobile) {
+                width: 100%;
+            }
+        }
+        &-link{
+            text-decoration: none;
+            color: #F3EBA2;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        &-time {
+            color:  #828282;
+            font-size: 12px;
+        }
+    }
+}

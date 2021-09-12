@@ -1,0 +1,128 @@
+.post {
+    box-shadow: 0 15px 25px rgba($color: $true-black, $alpha: .35);
+    background: $gray;
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+
+    &__content {
+        margin-bottom: 2rem;
+    }
+
+    &__header {
+        margin: 0 0 2.5rem;
+        
+        &--preview {
+            margin: -2.5rem -2.5rem 2.5rem;
+        }
+    }
+    &__title {
+        margin-bottom: 1.5rem;
+        font-size: 18px;
+        font-weight: 500;
+        &-link {
+            color: $white;
+            text-decoration: none;
+        }
+        &--mb0 {
+            margin-bottom: 0;
+        }
+    }
+    &__subtitle {
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: $white;
+        margin-bottom: 2rem;
+    }
+    &__footer {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: flex-end;
+        @include breakpoint ($mobile) {
+            flex-direction:column;
+            align-items: flex-start;
+        }
+    }
+
+    &__read {
+        color: #107EFF;
+        text-decoration: none;
+    }
+
+    &__img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__buttons {
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        color: rgba($color: $white, $alpha: .6);
+        
+            a{
+                color: inherit;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+
+            }
+        &-share--img {
+            margin-left: 0.7rem;
+            opacity: 0.6;
+        }
+    }
+    @include breakpoint ($mobile) {
+        padding: 1.3rem 1.5rem 1rem 1.5rem;
+    }
+}
+.post__text {
+    font-size: 1.4rem ;
+    color: $arcticle-text;
+    p {
+        margin-bottom: 2rem;
+        &:nth-child(4) {
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #1C1C1C;
+        }
+    }
+    &-img {
+        @include breakpoint ($mobile) {
+            max-width: 100%;
+        }
+    }
+}
+
+.post__data{
+    color: #828282;
+    font-size: 12px;
+    font-family: Lato;
+    line-height: 1.2;
+    display: flex;
+
+    &-item {
+        margin-right: 3rem;
+    }
+    &-tag {
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+        &::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: #C4C4C4;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+            position: absolute;
+            bottom: 0.33rem;
+            left: -1.5rem;
+        }
+
+    }
+}

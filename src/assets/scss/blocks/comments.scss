@@ -1,0 +1,38 @@
+.comments {
+    margin-top: 5rem;
+    &__item {
+      margin-bottom: 3rem;  
+      > .comments {
+        padding-left: 3rem;
+        margin-top: 3rem;
+    }
+    }
+    &__header {
+        display: flex;
+        margin-bottom:1.5rem }
+        &__avatar {
+            height: 3rem;
+            width: 3rem;
+            margin-right: 1.5rem;
+            border-radius: 50%;
+        }
+        &__name  {
+            font-size: 1.2rem;
+        }
+        &__time {
+            font-size: 1.2rem;
+            color: #757575;
+        }
+        &__content {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        &__reply {
+            font-family: inherit;
+            padding: 0;
+            font-size: 1.2rem;
+            color: #107EFF;
+            background: none;
+            border: none;
+        }
+}

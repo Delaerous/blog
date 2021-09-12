@@ -1,0 +1,62 @@
+.sidebar {
+    width: $sidebar-width;
+    height: 100vh;
+    background-color: $gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $sidebarz-index;
+    box-shadow: 5px 0  15px rgba(#050505, .1);
+    @include breakpoint($tablet) {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 4rem);
+        padding-bottom: 1.5rem;
+        overflow: auto;
+        
+        top: 4rem;
+        
+        transform: translateX(-100%);
+        transition: transform .2s linear;
+        
+       
+    }
+   
+
+}
+
+.sidebar__header {
+    height: 180px;
+    @include breakpoint ($mobile) {
+        height: 10rem;
+    }
+    &-img{
+        object-fit: cover;
+        display: block;
+        @include breakpoint ($mobile) {
+            height: 10rem;
+            width: 30rem;
+        }
+    }   
+    
+}
+
+.sidebar__profile {
+    padding: 0 2rem;
+    margin-top: -5rem;
+    @include breakpoint($tablet) {
+        margin-top: 1rem;
+        border-bottom: 1px solid #1C1C1C;
+       
+    }
+}
+
+.sidebar__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.active  {
+    transform: translateX(0);
+}

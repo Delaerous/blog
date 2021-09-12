@@ -1,0 +1,79 @@
+.work {
+    display: flex;
+    margin-bottom: 3rem;
+    box-shadow: 0 15px 25px rgba($color: $true-black, $alpha: .35);
+    background: $gray;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    @include breakpoint ($mobile) {
+     flex-direction: column;        
+    }
+    &__preview {
+        max-width: 100%;
+        flex: 1;
+        
+         img{
+             display: block;
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+             @include breakpoint ($mobile) {
+                height: 20rem;
+            }
+         }
+        
+    }
+    &__content {
+        flex-grow: 1;
+        max-width: 290px;
+        padding: 2.8rem 2.5rem  2.5rem;
+        @include breakpoint ($mobile) {
+            padding: 1.5rem;
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        padding-bottom: 3rem;
+        
+        &-link {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+    &__description {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 27px;
+        color: $arcticle-text;
+        padding-bottom: 3rem;
+    }
+    &__tags {
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 4px 4px rgba($color: $true-black, $alpha: .25);
+        margin-bottom: 9rem;
+        &-item {
+            background-color: #EA8C1E;
+            border-radius: 3px;
+            padding: 0.4rem 0.9rem;
+            @include breakpoint ($mobile) {
+                margin-right: 1rem;
+            }
+        }
+        @include breakpoint ($mobile) {
+            margin-bottom: 2rem;
+            justify-content: center;
+            box-shadow: none;
+        }
+    }
+    &__footer {
+        text-align: right;
+        @include breakpoint ($mobile) {
+            text-align: center;
+        }
+    }
+}

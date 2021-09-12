@@ -1,0 +1,32 @@
+.cabinet {
+    display: flex;
+    @include breakpoint ($mobile) {
+        flex-direction: column-reverse;
+        overflow: hidden;
+    }
+    &__form {
+        width: 34rem;
+        flex-grow: 1;
+        overflow: hidden;
+        
+        
+    }
+    &__account {
+        padding-left: 11rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include breakpoint ($mobile) {
+            padding: 1rem;
+        }
+    }
+    &__choose {
+        text-align: center;
+        font-size: 14px;
+        color: #107EFF;
+        text-decoration: underline;
+        input {
+            display: none;
+        }
+    }
+}
