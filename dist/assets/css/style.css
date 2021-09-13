@@ -411,18 +411,6 @@ body.blocked {
     .shadow .page {
         position: relative;
     }
-
-    .shadow .page:after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(18, 18, 18, 0.9);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 100;
-    }
 }
 
 .shadow {
@@ -439,6 +427,19 @@ body.blocked {
     top: 0;
     left: 0;
     z-index: 100;
+}
+
+@media screen and (max-width: 901px) {
+    .page__mask {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(18, 18, 18, 0.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
 }
 
 .header {
@@ -990,9 +991,8 @@ body.blocked {
 .add-post__form {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    align-items: center;
+    -ms-flex-align: end;
+    align-items: flex-end;
 }
 
 .add-post__form-textarea {
@@ -1005,7 +1005,7 @@ body.blocked {
     border: none;
     background: transparent;
     resize: none;
-    height: 2.6rem;
+    height: 3.5rem;
     overflow: hidden;
 }
 
@@ -1372,6 +1372,7 @@ body.blocked {
 }
 
 .form__control {
+    overflow: hidden;
     padding-top: 2.5rem;
     resize: none;
     display: block;
@@ -1683,12 +1684,51 @@ body.blocked {
 }
 
 .burger {
-    position: absolute;
-    left: 1.5rem;
+    display: none;
     width: 3rem;
     height: 2rem;
-    cursor: pointer;
-    display: none;
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: 0;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.burger:before, .burger:after,
+.burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+}
+
+.burger:before, .burger:after {
+    content: "";
+    transition: -webkit-transform 0.2s linear;
+    transition: transform 0.2s linear;
+    transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.burger:before {
+    top: 0;
+}
+
+.burger:after {
+    bottom: 0;
+}
+
+.burger span {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: opacity 0.2s linear;
 }
 
 @media screen and (max-width: 901px) {
@@ -1697,56 +1737,20 @@ body.blocked {
     }
 }
 
-.burger span, .burger span:before, .burger span:after {
-    width: 100%;
-    position: absolute;
-    height: 2px;
-    background: #fff;
-    display: block;
-    transition: 0.3s;
-    border-radius: 5px;
+.ass span {
+    opacity: 0;
 }
 
-.burger span:before {
-    content: "";
-    top: -0.8rem;
-    transition: top 300ms 300ms, -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+.ass:before, .ass:after {
+    top: 50%;
 }
 
-.burger span {
-    top: 2rem;
-}
-
-.burger span:after {
-    content: "";
-    bottom: -0.8rem;
-    transition: bottom 300ms 300ms, -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.burger span.active:before {
-    content: "";
-    top: 0px;
+.ass:before {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    transition: top 300ms, -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.burger span.active:after {
-    content: "";
-    bottom: 0;
+.ass:after {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    transition: bottom 300ms, -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.burger span.active {
-    background: rgba(255, 255, 255, 0);
 }

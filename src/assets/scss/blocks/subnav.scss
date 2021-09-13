@@ -8,7 +8,10 @@
     border-radius: 0 0 5px 5px;
     padding: .5rem 0;
     box-shadow: 0 6px 8px rgba($true-black, .2); 
-    
+    &--mobile {
+        display: flex;
+        flex-direction: column;
+    }
     &__link {
         display: block;
         padding: .45rem 1.2rem;
@@ -29,6 +32,7 @@
                 background: none;
             }
         }
+
         
     }
     @include breakpoint($tablet) {

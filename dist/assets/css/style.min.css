@@ -522,6 +522,11 @@ body.blocked {
   text-decoration: none;
   transition: background-color 0.3s;
 }
+@media screen and (max-width: 901px) {
+  .nav__link {
+    padding: 0.35rem 0.5rem;
+  }
+}
 .nav__link--has-subnav {
   position: relative;
   padding-right: 3rem;
@@ -558,6 +563,10 @@ body.blocked {
   border-radius: 0 0 5px 5px;
   padding: 0.5rem 0;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+.subnav--mobile {
+  display: flex;
+  flex-direction: column;
 }
 .subnav__link {
   display: block;
@@ -1475,15 +1484,15 @@ body.blocked {
   }
 }
 
-.ass span {
+.cross span {
   opacity: 0;
 }
-.ass:before, .ass:after {
+.cross:before, .cross:after {
   top: 50%;
 }
-.ass:before {
+.cross:before {
   transform: rotate(45deg);
 }
-.ass:after {
+.cross:after {
   transform: rotate(-45deg);
 }

@@ -49,6 +49,9 @@
     padding: 1.35rem 1.5rem;
     text-decoration: none;
     transition: background-color 0.3s ;
+    @include breakpoint ($tablet) {
+        padding: 0.35rem 0.5rem;
+    }
     
 
     &--has-subnav {
